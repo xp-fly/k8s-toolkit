@@ -8,7 +8,7 @@ WORKER_NAME=k8s-worker1
 
 hostnamectl set-hostname $WORKER_NAME
 echo "${MASTER_IP}    ${APISERVER_NAME}" >> /etc/hosts
-echo "${MASTER_IP}    ${APISERVER_NAME}" >> /etc/hosts
+echo "${WORKER_IP}    ${WORKER_NAME}" >> /etc/hosts
 
 ## master执行 kubeadm token create --print-join-command 获取 token 和 hash
 TOKEN=xxxx
