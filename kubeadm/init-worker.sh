@@ -19,4 +19,4 @@ kubeadm join ${APISERVER_NAME}:6443 --token ${TOKEN}  --discovery-token-ca-cert-
 # 复制master的ip到worker节点上
 rm -rf /root/.kube/
 mkdir /root/.kube/
-cp root@$APISERVER_NAME:/etc/kubernetes/admin.conf /root/.kube/config
+cp root@${APISERVER_NAME}:/etc/kubernetes/admin.conf /root/.kube/config
