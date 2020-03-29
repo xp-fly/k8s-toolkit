@@ -10,7 +10,7 @@ systemctl stop firewalld
 systemctl disable firewalld
 
 # 关闭 SeLinux
-setenforce 0
+# setenforce 0
 sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
 
 # 关闭 swap
